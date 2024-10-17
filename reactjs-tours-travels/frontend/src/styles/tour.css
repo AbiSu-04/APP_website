@@ -1,0 +1,99 @@
+.pagination span {
+   width          : 2rem;
+   height         : 2rem;
+   padding        : 5px;
+   border-radius  : 50px;
+   display        : flex;
+   align-items    : center;
+   justify-content: center;
+   border         : 1px solid var(--secondary-color);
+   color          : var(--heading-color);
+   font-size      : 1rem;
+   cursor         : pointer;
+   font-weight    : 500;
+}
+
+.active__page {
+   background: var(--secondary-color);
+   color     : #fff !important;
+}
+/* Container to display cards in a row */
+.tour-list {
+   display: flex;
+   flex-wrap: wrap; /* Allows cards to wrap to the next line if the screen is too small */
+   justify-content: space-between; /* Adds space between the cards */
+   gap: 16px; /* Adds space between cards */
+   padding: 20px;
+ }
+ 
+ .tour-card {
+   flex: 1 1 300px; /* Allows the cards to be flexible and take up equal space, with a minimum width of 300px */
+   max-width: 300px; /* Ensures the card doesn't exceed 300px width */
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   margin: 10px;
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .tour-card-image {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+ }
+ 
+ .tour-card-content {
+   padding: 16px;
+ }
+ 
+ .tour-card-title {
+   font-size: 1.5rem;
+   margin: 0;
+   color: #333;
+ }
+ 
+ .tour-card-description {
+   font-size: 1rem;
+   color: #777;
+   margin: 10px 0;
+ }
+ 
+ .tour-card-info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 12px 0;
+ }
+ 
+ .tour-card-price {
+   font-size: 1.2rem;
+   font-weight: bold;
+   color: #2a9d8f;
+ }
+ 
+ .tour-card-rating {
+   font-size: 1rem;
+   color: #f4a261;
+ }
+ 
+ .tour-card-button {
+   background-color: #e76f51;
+   color: white;
+   border: none;
+   padding: 10px 16px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+ }
+ 
+ .tour-card-button:hover {
+   background-color: #d65f42;
+ }
+.body-tour{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+   gap: 20px; /* Adds space between the cards */
+   padding: 20px;
+}

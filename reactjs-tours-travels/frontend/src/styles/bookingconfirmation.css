@@ -1,0 +1,130 @@
+/* .booking-confirmation {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  .confirmation-details {
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-actions {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .confirm-button, .edit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirm-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .edit-button {
+    background-color: #007bff;
+    color: white;
+  }
+   */
+
+
+
+
+   :root {
+    --primary-color: #4CAF50;
+    --secondary-color: #007BFF;
+    --text-color: #333;
+    --border-radius: 12px;
+    --padding: 1.5rem;
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  
+  /* body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: var(--text-color);
+  } */
+  
+  .booking-confirmation {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    background-color: white;
+    box-shadow: var(--box-shadow);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: var(--primary-color);
+  }
+  
+  .confirmation-details {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .confirmation-details p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .confirmation-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .confirm-button, .edit-button {
+    flex: 1;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .confirm-button {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .confirm-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
+  
+  .edit-button {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056d2;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 600px) {
+    .confirmation-actions {
+      flex-direction: column;
+    }
+  
+    .confirm-button, .edit-button {
+      width: 100%;
+    }
+  }
+  
