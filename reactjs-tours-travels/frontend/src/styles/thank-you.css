@@ -7,22 +7,3 @@
    font-size: 2.5rem;
    font-family: var(--subtitle-font-name);
 }
-.back_to_home_btn{
-   height:2rem;
-   width:15rem;
-   background-color: rgb(47, 47, 255);
-   color:white;
-   border:none;
-   border-radius:8px;
-   
-}
-
-
-@media screen and (max-width:450px){
-   .back_to_home_btn{
-      width:15rem;
-      height:3rem;
-      color:white;
-      text-decoration: none;
-   }
-}
