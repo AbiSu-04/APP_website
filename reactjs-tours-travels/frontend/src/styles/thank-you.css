@@ -7,3 +7,16 @@
    font-size: 2.5rem;
    font-family: var(--subtitle-font-name);
 }
+.back_to_home_btn{
+   height:4rem;
+   width:10rem;
+   background-color: rgb(47, 47, 255);
+}
+
+
+@media screen and (max-width:450px){
+   .back_to_home_btn{
+      width:6rem;
+      height:3rem;
+   }
+}
