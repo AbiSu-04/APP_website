@@ -127,4 +127,8 @@
       width: 100%;
     }
   }
-  
+  @media screen and (max-width:450px){
+    .confirm-button{
+      width:10rem;
+    }
+  }
