@@ -18,5 +18,8 @@
    .back_to_home_btn{
       width:15rem;
       height:3rem;
+      background-color: rgb(47, 47, 255);
+      color:white;
+      text-decoration: none;
    }
 }
