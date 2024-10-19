@@ -15,8 +15,8 @@ const ThankYou = () => {
                      <h1 className='mb-3 fw-semibold'>Thank You</h1>
                      <h3 className='mb-4'>Your Tour Is Booked</h3>
 
-                     {/* <Button className='btn primary__btn w-25'><Link to='/home'>Back To Home</Link></Button> */}
-                     <button className="back_to_home_btn" onClick={()=>navigate("/home")}> Back to home</button>
+                     <Button className='btn primary__btn w-25'><Link to='/home'>Back To Home</Link></Button>
+                     {/* <button className="back_to_home_btn" onClick={()=>navigate("/home")}> Back to home</button> */}
                   </div>
                </Col>
             </Row>

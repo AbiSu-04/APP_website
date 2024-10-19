@@ -8,10 +8,13 @@
    font-family: var(--subtitle-font-name);
 }
 .back_to_home_btn{
-   height:4rem;
-   width:10rem;
+   height:2rem;
+   width:15rem;
    background-color: rgb(47, 47, 255);
    color:white;
+   border:none;
+   border-radius:8px;
+   
 }
 
 
