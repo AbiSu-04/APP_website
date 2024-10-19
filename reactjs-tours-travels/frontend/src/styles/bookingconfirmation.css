@@ -130,6 +130,6 @@
   @media screen and (max-width:450px){
     .confirm-button{
       width:10rem;
-      align-self: center;
+      margin-left:5rem;
     }
   }
