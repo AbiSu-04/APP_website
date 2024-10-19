@@ -168,7 +168,6 @@
 }
 
 
-/* Container to display cards in a row */
 .tour-list {
    display: flex;
    flex-wrap: wrap; /* Allows cards to wrap to the next line if the screen is too small */
@@ -176,8 +175,8 @@
    gap: 16px; /* Adds space between cards */
    padding: 20px;
  }
- 
- .tour-card {
+
+.tour-card {
    flex: 1 1 300px; /* Allows the cards to be flexible and take up equal space, with a minimum width of 300px */
    max-width: 300px; /* Ensures the card doesn't exceed 300px width */
    border: 1px solid #ddd;
@@ -187,49 +186,49 @@
    margin: 10px;
    display: flex;
    flex-direction: column;
- }
- 
- .tour-card-image {
+}
+
+.tour-card-image {
    width: 100%;
    height: 200px;
    object-fit: cover;
- }
- 
- .tour-card-content {
+}
+
+.tour-card-content {
    padding: 16px;
- }
- 
- .tour-card-title {
+}
+
+.tour-card-title {
    font-size: 1.5rem;
    margin: 0;
    color: #333;
- }
- 
- .tour-card-description {
+}
+
+.tour-card-description {
    font-size: 1rem;
    color: #777;
    margin: 10px 0;
- }
- 
- .tour-card-info {
+}
+
+.tour-card-info {
    display: flex;
    justify-content: space-between;
    align-items: center;
    margin: 12px 0;
- }
- 
- .tour-card-price {
+}
+
+.tour-card-price {
    font-size: 1.2rem;
    font-weight: bold;
    color: #2a9d8f;
- }
- 
- .tour-card-rating {
+}
+
+.tour-card-rating {
    font-size: 1rem;
    color: #f4a261;
- }
- 
- .tour-card-button {
+}
+
+.tour-card-button {
    background-color: #e76f51;
    color: white;
    border: none;
@@ -237,15 +236,52 @@
    border-radius: 5px;
    cursor: pointer;
    transition: background-color 0.3s;
- }
- 
- .tour-card-button:hover {
+}
+
+.tour-card-button:hover {
    background-color: #d65f42;
- }
-.body-tour{
+}
+
+.body-tour {
    display: grid;
    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
    gap: 20px; /* Adds space between the cards */
    padding: 20px;
-   margin-left:2rem;
+   margin-left: 2rem;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+   .body-tour {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+      gap: 16px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .body-tour {
+      grid-template-columns: 1fr; /* Single column for smaller screens */
+      gap: 16px;
+      padding: 10px;
+      margin-left: 0;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .tour-card {
+      flex: 1 1 100%; /* Cards take full width on very small screens */
+      max-width: 100%;
+   }
+
+   .tour-card-title {
+      font-size: 1.2rem;
+   }
+
+   .tour-card-price {
+      font-size: 1rem;
+   }
+
+   .tour-card-button {
+      padding: 8px 12px;
+   }
 }
