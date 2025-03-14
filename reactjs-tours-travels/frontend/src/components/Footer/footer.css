@@ -44,10 +44,15 @@
 }
 
 .footer__quick-links p {
-   font-size: 1.2rem;
+   font-size: 14px;
 }
 
 .copyright {
    color    : var(--text-color);
    font-size: 1.2rem;
+}
+
+.highlight {
+   color: #07579c; 
+   font-weight: bold; 
 }

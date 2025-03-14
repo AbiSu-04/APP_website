@@ -18,7 +18,7 @@ const TourDetails = () => {
    const { user } = useContext(AuthContext)
 
    // fetch data from database
-   const { data: tour, loading, error } = useFetch(`http:localhost:8000/api/v1/tours/${id}`)
+   const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`)
 
    const { photo, title, desc, price, reviews, city, address, distance, maxGroupSize } = tour
 
@@ -40,12 +40,9 @@ const TourDetails = () => {
             rating: tourRating
          }
 
-         const res = await fetch(`http://localhost:8000/api/v1/review/${id}`, {
+         const res = await fetch(`${BASE_URL}/review/${id}`, {
             method: 'post',
             headers: {
-
-             
-             
                'content-type': 'application/json'
             },
             credentials: 'include',

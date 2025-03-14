@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react'
 import CommonSection from '../shared/CommonSection'
 // import tourData from '../assets/data/tours'
@@ -8,6 +9,18 @@ import Newsletter from './../shared/Newsletter'
 import { Col, Container, Row } from 'reactstrap'
 import useFetch from '../hooks/useFetch'
 import { BASE_URL } from '../utils/config'
+import ootyImage from '../assets/images/ooty.jpg';
+import yoga from '../assets/images/Isha.jpg';
+import bhavani from '../assets/images/dam.jpg';
+import siruvani from '../assets/images/siruvani.jpg';
+import valparai from '../assets/images/valparai.jpg';
+import noyyal from '../assets/images/noyyal.jpeg';
+import monkey from '../assets/images/monkey.jpg';
+import coimbatore from '../assets/images/city.jpg';
+import perur from '../assets/images/temple.jpg';
+import anamalai from '../assets/images/tiger.jpeg';
+import kovai from '../assets/images/kovai.jpg';
+
 
 import { useNavigate } from 'react-router-dom'
 const Tours = () => {
@@ -20,75 +33,82 @@ const Tours = () => {
 
    const tours = [
       {
-        "name": "Tropical Paradise",
-        "description": "Experience the ultimate tropical getaway with pristine beaches and crystal-clear waters.",
-        "price": 1999,
-        "rating": 4.8,
-        "image": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
-      },
-      {
-        "name": "Mountain Adventure",
-        "description": "Enjoy a thrilling mountain adventure with hiking, climbing, and breathtaking views.",
-        "price": 1599,
-        "rating": 4.6,
-        "image": "https://media.istockphoto.com/id/1652166108/photo/aerial-view-of-woman-standing-on-top-of-the-mountain-ridge-augstmatthorn.webp?a=1&b=1&s=612x612&w=0&k=20&c=3TTjPVQq8o2TXwUMEgJ1FqYSW0pWUCv0ETrx4Sja1tw="
-      },
-      {
-        "name": "City Explorer",
-        "description": "Discover the culture and history of the world's greatest cities with guided tours and more.",
-        "price": 999,
-        "rating": 4.7,
-        "image": "https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-      },
-      {
-        "name": "Desert Safari",
-        "description": "Take an adventurous desert safari with camel rides, sandboarding, and traditional cuisine.",
-        "price": 1299,
-        "rating": 4.5,
-        "image": "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-      },
-      {
-        "name": "Rainforest Expedition",
-        "description": "Explore the heart of the rainforest and witness exotic wildlife and lush greenery.",
-        "price": 1799,
-        "rating": 4.9,
-        "image": "https://images.unsplash.com/photo-1519608487953-e999c86e7455?ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fGZvcmVzdHxlbnwwfHx8fDE2MzY3MzI1NzY&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-      },
-      {
-        "name": "Island Hopping Adventure",
-        "description": "Visit multiple breathtaking islands and enjoy snorkeling, sunbathing, and tropical vibes.",
-        "price": 1499,
-        "rating": 4.7,
-        "image": "https://media.istockphoto.com/id/1284527176/photo/woman-swims-around-coral-reef.webp?a=1&b=1&s=612x612&w=0&k=20&c=N1uTZkgC4lU9445TT-tWAEvIh5nu6y2qJZ2L2tSSECE="
-      },
-      {
-        "name": "Skiing in the Alps",
-        "description": "Hit the slopes of the beautiful Alps and enjoy world-class skiing and après-ski activities.",
-        "price": 2599,
-        "rating": 4.8,
-        "image": "https://media.istockphoto.com/id/598215726/photo/skier-skiing-downhill-against-matterhorn-peak-in-switzerland.webp?a=1&b=1&s=612x612&w=0&k=20&c=FkdC8eAT5O0L_saMSU3V5vnIn5U5l5hwZKs0KDZQ4mE="
-      },
-      {
-        "name": "Safari in Kenya",
-        "description": "Embark on a thrilling wildlife safari in Kenya's famous national parks and reserves.",
-        "price": 2999,
-        "rating": 4.9,
-        "image": "https://media.istockphoto.com/id/2111967560/photo/masai-giraffe-in-front-of-kilimanjaro-mountain-in-amboseli-national-park-kenya.webp?a=1&b=1&s=612x612&w=0&k=20&c=8eNpVCWqfus9_Gv8otkUk1yRqDoyUBnwocauJ3JJ6OE="
-      },
-      {
-        "name": "Northern Lights Adventure",
-        "description": "Witness the magical Northern Lights in the Arctic Circle with cozy cabins and snow activities.",
-        "price": 2299,
-        "rating": 5.0,
-        "image": "https://media.istockphoto.com/id/525381711/photo/hamnoy-nothern-lights.webp?a=1&b=1&s=612x612&w=0&k=20&c=7chOgmz3poB1c_r9zaeCdJifN07yHfO_DZz9W1vP-xU="
-      },
-      {
-        "name": "Wine Tasting Tour",
-        "description": "Enjoy a relaxing tour of renowned vineyards and taste exquisite wines in scenic settings.",
-        "price": 1199,
-        "rating": 4.6,
-        "image": "https://media.istockphoto.com/id/1041495484/photo/glass-of-red-wine-and-vineyards.webp?a=1&b=1&s=612x612&w=0&k=20&c=iDDCv8_kr9D52RQh_Ay2E9RBZjKTmOJvmPynkrrKGUI="
-      }
+          "name": "Ooty Hill Station Escape",
+          "description": "Escape to the serene hill station of Ooty with lush greenery, cool climate, and beautiful lakes.",
+          "price": 1599,
+          "rating": 4.7,
+          "image": ootyImage
+        },
+        {
+          "name": "Isha Yoga Center & Adiyogi Statue",
+          "description": "Visit the world-renowned Isha Yoga Center and marvel at the majestic Adiyogi statue.",
+          "price": 999,
+          "rating": 4.8,
+          "image": yoga
+        },
+        {
+          "name": "Bhavani Sagar Dam & River",
+          "description": "Explore the beautiful Bhavani Sagar Dam and enjoy boating along the tranquil river.",
+          "price": 1299,
+          "rating": 4.6,
+          "image": bhavani
+        },
+        {
+          "name": "Siruvani Waterfalls & Dam",
+          "description": "Discover the scenic beauty of Siruvani waterfalls, known for their serene surroundings and fresh waters.",
+          "price": 1399,
+          "rating": 4.7,
+          "image": siruvani
+        },
+        {
+          "name": "Valparai Tea Gardens Tour",
+          "description": "Take a walk through the lush tea gardens of Valparai and experience the tranquility of this hill station.",
+          "price": 1499,
+          "rating": 4.6,
+          "image": valparai
+        },
+        {
+          "name": "Noyyal River Safari",
+          "description": "Take a boat safari along the Noyyal River, exploring wildlife and the beautiful surroundings.",
+          "price": 999,
+          "rating": 4.5,
+          "image": noyyal
+        },
+        {
+          "name": "Monkey Falls Trekking",
+          "description": "Enjoy a fun-filled trek through the Western Ghats to reach the famous Monkey Falls, known for its cool waters and lush greenery.",
+          "price": 1199,
+          "rating": 4.8,
+          "image": monkey
+        },
+        {
+          "name": "Coimbatore City Tour",
+          "description": "Explore the historical and cultural landmarks of Coimbatore, including temples, museums, and vibrant local markets.",
+          "price": 799,
+          "rating": 4.7,
+          "image": coimbatore
+        },
+        {
+          "name": "Perur Pateeswarar Temple",
+          "description": "Visit the iconic Perur Pateeswarar Temple, a fine example of Dravidian architecture, dedicated to Lord Shiva.",
+          "price": 699,
+          "rating": 4.9,
+          "image": perur
+         },
+        {
+          "name": "Anamalai Tiger Reserve Safari",
+          "description": "Embark on an exciting wildlife safari at the Anamalai Tiger Reserve, home to tigers, elephants, and a variety of other animals.",
+          "price": 1999,
+          "rating": 4.8,
+          "image": anamalai
+        },
+        {
+          "name": "Kovai Kutralam Waterfalls",
+          "description": "Visit the Kovai Kutralam Waterfalls, a peaceful and scenic spot perfect for a refreshing dip and relaxation.",
+          "price": 1099,
+          "rating": 4.7,
+          "image":   kovai
+        }
     ];
     
     

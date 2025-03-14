@@ -7,8 +7,8 @@ import Register from './../pages/Register'
 import SearchResultList from './../pages/SearchResultList'
 import TourDetails from './../pages/TourDetails'
 import Tours from './../pages/Tours'
-import Testimonials from '../components/Testimonial/Testimonials'
-import BookingConfirmation from '../pages/bookconfirm'
+import MasonryImagesGallery from '../components/Image-gallery/MasonryImagesGallery'
+
 const Routers = () => {
    return (
       <Routes>
@@ -17,11 +17,10 @@ const Routers = () => {
          <Route path='/tours' element={<Tours/>} />
          <Route path='/tours/:id' element={<TourDetails/>} />
          <Route path='/login' element={<Login/>} />
-         <Route path='/about' element={<Testimonials/>}/>
          <Route path='/register' element={<Register/>} />
          <Route path='/thank-you' element={<ThankYou/>} />
          <Route path='/tours/search' element={<SearchResultList/>} />
-         <Route path='/booking-confirmation' element={<BookingConfirmation/>}/>
+         <Route path='/gallery' element={<MasonryImagesGallery/>}/>
       </Routes>
    )
 }

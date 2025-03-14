@@ -9,8 +9,8 @@ import { BASE_URL } from '../utils/config'
 
 const Login = () => {
    const [credentials, setCredentials] = useState({
-      email: "",
-      password:""
+      email: undefined,
+      password: undefined
    })
 
    const {dispatch} = useContext(AuthContext)
@@ -26,7 +26,7 @@ const Login = () => {
       dispatch({type:'LOGIN_START'})
 
       try {
-         const res = await fetch("http://localhost:8000/api/v1/auth/login", {
+         const res = await fetch(`${BASE_URL}/auth/login`, {
             method:'post',
             headers: {
                'content-type':'application/json'

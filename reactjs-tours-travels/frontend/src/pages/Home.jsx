@@ -4,21 +4,15 @@ import { Container, Row, Col, CardSubtitle } from 'reactstrap'
 import heroImg from '../assets/images/hero-img01.jpg'
 import heroImg02 from '../assets/images/hero-img02.jpg'
 import heroVideo from '../assets/images/hero-video.mp4'
-import worldImg from '../assets/images/world.png'
-import experienceImg from '../assets/images/experience.png'
-import { useNavigate } from 'react-router-dom'
+
+
 import Subtitle from './../shared/subtitle'
 import SearchBar from './../shared/SearchBar'
 import ServiceList from '../services/ServiceList'
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList'
 import MasonryImagesGallery from '../components/Image-gallery/MasonryImagesGallery'
-import Testimonials from '../components/Testimonial/Testimonials'
-import NewsLetter from '../shared/Newsletter'
-import { tours } from '../utils/data'
-const Home = () => {
-   const navigate = useNavigate();
 
-  
+const Home = () => {
    return <>
       {/* ========== HERO SECTION ========== */}
       <section>
@@ -27,13 +21,16 @@ const Home = () => {
                <Col lg='6'>
                   <div className="hero__content">
                      <div className="hero__subtitle d-flex align-items-center">
-                        <Subtitle subtitle={'Know Before You Go'} />
-                        <img src={worldImg} alt="" />
+                        <Subtitle subtitle={'Get To Know'} />
+                        
                      </div>
-                     <h1>Traveling opens the door to creating <span className='hightlight'> memories</span></h1>
-                     <p>
-                     Welcome ! Explore the world’s most beautiful destinations with us. Whether you’re looking for adventure, relaxation, or cultural experiences, we’ve got you covered.
-                     </p>
+                     <h1>Discover the Hidden Gems</h1>
+                     <h2>Coimbatore: Tradition, Innovation, and Vibrant Living</h2>
+        <p>Welcome to the dynamic city of Coimbatore, where tradition meets innovation against the backdrop of the Western Ghats.</p>
+        <p>As the bustling "Manchester of South India," Coimbatore stands as a cornerstone of industrial prowess, contributing significantly to the economic landscape of Tamil Nadu. With a tapestry of educational institutions fostering knowledge and research, the city embraces a rich cultural heritage, hosting festivals and events that reflect its diverse ethos.</p>
+        <p> Explore the serenity of Marudamalai Temple, the spiritual aura of Dhyanalinga Temple, and the natural beauty of Siruvani Waterfalls. Coimbatore's culinary scene is a delightful journey through South Indian flavors and regional delicacies.</p>
+        <p>Boasting seamless connectivity through road, rail, and the Coimbatore International Airport, the city beckons both travelers and investors alike.</p>
+        <p>Experience the vibrant lifestyle, explore business opportunities, and immerse yourself in the cultural tapestry that makes Coimbatore truly exceptional.</p>
                   </div>
                </Col>
 
@@ -64,8 +61,8 @@ const Home = () => {
          <Container>
             <Row>
                <Col lg='3'>
-                  <h5 className="services__subtitle">What we serve</h5>
-                  <h2 className="services__title">We offer our best services</h2>
+                  {/* <h5 className="services__subtitle">What we serve</h5> */}
+                  <h2 className="services__title">Our Services</h2>
                </Col>
                <ServiceList />
             </Row>
@@ -74,7 +71,7 @@ const Home = () => {
 
       {/* ========== FEATURED TOUR SECTION START ========== */}
       <section>
-         {/* <Container>
+         <Container>
             <Row>
                <Col lg='12' className='mb-5'>
                   <Subtitle subtitle={'Explore'} />
@@ -82,24 +79,7 @@ const Home = () => {
                </Col>
                <FeaturedTourList />
             </Row>
-         </Container> */}
-
-
-<h2 className='featured__tour-title' style={{marginLeft:"4rem"}}>Our featured tours</h2>
-<div className = "body-tour">
- {tours.map((tour,index)=>(<div className="tour-card" key = {index} >
-      <img src={tour.image} alt={tour.name} className="tour-card-image" />
-      <div className="tour-card-content">
-        <h2 className="tour-card-title">{tour.name}</h2>
-        <p className="tour-card-description">{tour.description}</p>
-        <div className="tour-card-info">
-          <p className="tour-card-price">Price: Rs.{tour.price}</p>
-          <p className="tour-card-rating">Rating: {tour.rating} / 5</p>
-        </div>
-        <button className="tour-card-button" onClick={()=>navigate("/booking-confirmation")}>Book Now</button>
-      </div>
-    </div>))}
-    </div>
+         </Container>
       </section>
       {/* ========== FEATURED TOUR SECTION END =========== */}
 
@@ -140,13 +120,14 @@ const Home = () => {
       </section>
       {/* ========== EXPERIENCE SECTION END ============== */}
 
+
       {/* ========== GALLERY SECTION START ============== */}
       <section>
          <Container>
             <Row>
                <Col lg='12'>
                   <Subtitle subtitle={'Gallery'} />
-                  <h2 className="gallery__title">Visit our customers tour gallery</h2>
+                  <h2 className="gallery__title">Our  Gallery</h2>
                </Col>
                <Col lg='12'>
                   <MasonryImagesGallery />
@@ -157,7 +138,7 @@ const Home = () => {
       {/* ========== GALLERY SECTION END ================ */}
 
       {/* ========== TESTIMONIAL SECTION START ================ */}
-      <section>
+      {/* <section>
          <Container>
             <Row>
                <Col lg='12'>
@@ -169,9 +150,9 @@ const Home = () => {
                </Col>
             </Row>
          </Container>
-      </section>
+      </section> */}
       {/* ========== TESTIMONIAL SECTION END ================== */}
-      <NewsLetter />
+      {/* <NewsLetter /> */}
    </>
 }
 

@@ -6,7 +6,7 @@ import useFetch from './../../hooks/useFetch'
 import { BASE_URL } from './../../utils/config'
 
 const FeaturedTourList = () => {
-   const {data: featuredTours, loading, error} = useFetch("http:localhost:8000/api/v1/tours/search/getFeaturedTour")
+   const {data: featuredTours, loading, error} = useFetch(`${BASE_URL}/tours/search/getFeaturedTour`)
    // console.log(featuredTours)
 
    return (

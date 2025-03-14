@@ -17,6 +17,7 @@ const quick__links = [
       path: '/tours',
       display: 'Tours'
    },
+   
 ]
 
 const quick__links2 = [
@@ -44,18 +45,19 @@ const Footer = () => {
                <Col lg='3'>
                   <div className="logo">
                      <img src={logo} alt="" />
-                     <p>travel through the world with the infinite joy!!</p>
-                     <div className="social__link d-flex align-items-center gap-4">
+                     <p> Unleashing the Potential of <span className='highlight'>Local Tourism</span></p>
+
+                     {/* <div className="social__link d-flex align-items-center gap-4">
                         <span>
                            <Link to='#'>
                               <i class='ri-youtube-line'></i>
                            </Link>
                         </span>
-                        <span>
+                        { <span>
                            <Link to='#'>
                               <i class='ri-github-fill'></i>
                            </Link>
-                        </span>
+                        </span> }
                         <span>
                            <Link to='#'>
                               <i class='ri-facebook-circle-line'></i>
@@ -66,9 +68,9 @@ const Footer = () => {
                               <i class='ri-instagram-line'></i>
                            </Link>
                         </span>
-                     </div>
+                        </div>*/}
                   </div>
-               </Col>
+               </Col> 
 
                <Col lg='3'>
                   <h5 className="footer__link-title">Discover</h5>
@@ -98,14 +100,15 @@ const Footer = () => {
                </Col>
                <Col lg='3'>
                   <h5 className="footer__link-title">Contact</h5>
+                  
 
                   <ListGroup className='footer__quick-links'>
                      <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-3'>
                         <h6 className='mb-0 d-flex align-items-center gap-2'>
                            <span><i class='ri-map-pin-line'></i></span>
-                           Address:
+                           Address: 
                         </h6>
-                        <p className='mb-0'>wall street</p>
+                        <p className='mb-0'> 235 518, Wynell Squares, Tillmanview, CBE 84855</p>
                      </ListGroupItem>
 
                      <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-3'>
@@ -114,7 +117,7 @@ const Footer = () => {
                            Email:
                         </h6>
 
-                        <p className='mb-0'>travelaround@gmail.com</p>
+                        <p className='mb-0'>planmytrip@hiddenkovai.com</p>
                      </ListGroupItem>
 
                      <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-3'>
@@ -123,7 +126,7 @@ const Footer = () => {
                            Phone:
                         </h6>
 
-                        <p className='mb-0'>9487584587</p>
+                        <p className='mb-0'>+91 6532057820</p>
                      </ListGroupItem>
                   </ListGroup>
                </Col>

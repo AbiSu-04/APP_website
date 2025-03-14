@@ -19,7 +19,7 @@ const SearchBar = () => {
          return alert('All fields are required!')
       }
 
-      const res = await fetch(`http:localhost:8000/api/v1/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`)
+      const res = await fetch(`${BASE_URL}/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`)
       
       if(!res.ok) alert('Something went wrong')
 

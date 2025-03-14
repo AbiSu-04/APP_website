@@ -1,10 +1,10 @@
 :root {
-   --primary-color     : #4d01ff;
-   --secondary-color   : #ffbd23;
+   --primary-color     : #07579c;
+   --secondary-color   : #07579c;
    --heading-color     : #0b2727;
    --text-color        : #6e7074;
    --font-name         : "Montserrat", sans-serif;
-   --subtitle-font-name: "Island Moments", cursive;
+   --subtitle-font-name: "Comic sans MS", cursive;
 }
 
 .header {

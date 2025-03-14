@@ -11,7 +11,6 @@
 .login__form {
    padding   : 50px;
    background: var(--secondary-color);
-
    position  : relative;
 }
 
